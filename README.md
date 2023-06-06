@@ -44,9 +44,11 @@ The generated script was refactored to improve readability, maintainability, and
 
 ### Business Layer
 This layer expresses business intent. It is agnostic of the UI, testing tool and interaction code. Refer to **`demo\tests\Authentication.s.csv`**
+![2023-06-06_144602](https://github.com/santosn-qa/sahi-pro/assets/26606116/b1d8f389-ec23-4cbe-af29-f2ada77a5115)
 
 ### Implementation Layer
 This layer implements the business keywords specified in the previous layer. This is implemented with Sahi scripts (sah). Sahi script is based on javascript. Sahi script is parsed by Sahi and the parsed script is fully valid javascript which is executed by the rhino javascript engine. Refer to **`demo\functions\Authentication.sah`** 
+![2023-06-06_144602](https://github.com/santosn-qa/sahi-pro/assets/26606116/485c3fef-d48a-4adf-8134-6388a4da08b3)
 
 ### Accessor Repository
 With Sahi Pro, it is best practice to create Accessor Repository (AR). 
@@ -63,6 +65,12 @@ var $ERROR_MESSAGE = _byXPath("//*[@data-test='error']");
 var $SUBMIT_OPENMENU = _div("header_label");
 var $LINK_LOGOUT = _link("Logout");
 ```
+
+
+### Sample Report
+Below is a screenshot of a sample test execution report:
+![2023-06-06_144547](https://github.com/santosn-qa/sahi-pro/assets/26606116/4e9447c8-6a9a-42b5-9a8b-1f41489c162d)
+
 
 
 ### 🚀 About Me
