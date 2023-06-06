@@ -1,0 +1,38 @@
+	_include("Authentication_AR.sah");	
+	
+	// input: $email
+	function enterUserEmail($email){
+		_setValue($USERNAME, $email);
+	};
+
+	// input: $password (encrypted)
+	function enterPassword($password){
+		_setPassword($PASSWORD, $password);
+	};
+	
+	// handle login; click Login button
+	function clickLogin(){
+		_click($SUBMIT_LOGIN);
+	};
+	
+	// validate error message
+	function verifyErrorMessage($message){
+		_assertTrue(_areEqual(_getText($ERROR_MESSAGE), $message));
+	};
+
+	// open sidebar menu
+	function clickToOpenMenu(){
+		_click($SUBMIT_OPENMENU);
+	};
+
+	// handle logout; click Logout button
+	function clickLogout(){
+		_click($LINK_LOGOUT);
+	};
+
+	// validate if current page is same as expected target page
+	function verifyIAmOnTargetPage($targetPageURL){
+		var $currentPageURL;
+		_set($currentPageURL, window.location.href);
+		_assertTrue(_areEqual($currentPageURL, $targetPageURL));
+	};

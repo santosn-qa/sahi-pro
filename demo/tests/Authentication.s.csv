@@ -1,0 +1,21 @@
+"TestCase","Key Word","Argument 1","Argument 2"
+,"loadSahi","../functions/Authentication.sah"
+
+"TC 1001 Valid Authentication","[Documentation]","This test case will accept valid credentials and verify that the user is logged in and redirected to the inventory page."
+
+,"enter User Email","email:standard_user"
+,"enter Password","password:MgkKEQBUNh1BIgwL"
+,"click Login"
+,"verify I Am On Target Page","target Page URL:https://www.saucedemo.com/inventory.html"
+,"click To Open Menu"
+,"click Logout"
+,"verify I Am On Target Page","target Page URL:https://www.saucedemo.com/"
+
+
+"TC 1002 Invalid Authentication","[Documentation]","This test case will not accept invalid credentials and will return an error"
+
+,"enter User Email","email:locked_out_user"
+,"enter Password","password:MgkKEQBUNh1BIgwL"
+,"click Login"
+,"verify I Am On Target Page","target Page URL:https://www.saucedemo.com/"
+,"verify Error Message","message:Epic sadface: Sorry, this user has been locked out."

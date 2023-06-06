@@ -1,0 +1,7 @@
+var $USERNAME = _textbox("user-name");
+var $PASSWORD = _password("password");
+var $SUBMIT_LOGIN = _submit("Login");
+var $ERROR_MESSAGE = _byXPath("//*[@data-test='error']");
+
+var $SUBMIT_OPENMENU = _div("header_label");
+var $LINK_LOGOUT = _link("Logout");
