@@ -44,16 +44,20 @@ The generated script was refactored to improve readability, maintainability, and
 
 ### Business Layer
 This layer expresses business intent. It is agnostic of the UI, testing tool and interaction code. Refer to **`demo\tests\Authentication.s.csv`**
+
 ![2023-06-06_144602](https://github.com/santosn-qa/sahi-pro/assets/26606116/b1d8f389-ec23-4cbe-af29-f2ada77a5115)
 
 ### Implementation Layer
 This layer implements the business keywords specified in the previous layer. This is implemented with Sahi scripts (sah). Sahi script is based on javascript. Sahi script is parsed by Sahi and the parsed script is fully valid javascript which is executed by the rhino javascript engine. Refer to **`demo\functions\Authentication.sah`** 
-![2023-06-06_144602](https://github.com/santosn-qa/sahi-pro/assets/26606116/485c3fef-d48a-4adf-8134-6388a4da08b3)
+
+![2023-06-06_144637](https://github.com/santosn-qa/sahi-pro/assets/26606116/58ef96f3-813f-4b3d-a7a6-7f8826e6bd50)
 
 ### Accessor Repository
 With Sahi Pro, it is best practice to create Accessor Repository (AR). 
 
 Accessor Repository (AR) is a central place to keep all Acessors (object identifiers). When an element changes, its identifier can be changed in a single place and it will reflect in all scripts. 
+
+Notice in below code snippet that I used different approaches for locating elements, demonstrating that the tool is capable of recognizing various ways of locating elements.
 
 **`Authentication_AR.sah`**
 ``` js
